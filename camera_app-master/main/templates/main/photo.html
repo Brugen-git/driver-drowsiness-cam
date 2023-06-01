@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Dashboard Cam {% endblock %}
+
+{% block main%}
+    <div class="center">
+            <h2 style="margin-bottom: 40px"> Press the button to access Driver Dashboard Camera<span style="font-size: 14px; font-style: italic">(Remote Camera)</span></h2>
+            <button type="button" class="btn" onclick="take_video()">Access Camera</button>
+
+    </div>
+    <script>
+    function take_video() {
+        $.get('{% url "main:take_video" %}', (data) => {
+            console.log("data is: ", data)
+        })
+    }
+    </script>
+{% endblock %}

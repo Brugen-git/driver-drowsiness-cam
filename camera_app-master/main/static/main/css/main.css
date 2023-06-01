@@ -1,0 +1,11 @@
+button.btn {
+    background-color: #e5980a;
+    color: white;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+button.btn:hover {
+    background-color: #ecc36c;
+}
